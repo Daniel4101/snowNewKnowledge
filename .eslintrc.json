@@ -1,0 +1,76 @@
+{
+    "env": {
+        "browser": true,
+        "es6":false,
+        "node": true
+    },
+    "extends": [ "airbnb","prettier", "servicenow"
+    ],
+    "globals": {
+        "Atomics": "readonly",
+        "SharedArrayBuffer": "readonly"
+    },
+    "parserOptions": {
+        "ecmaVersion": 2018
+    },
+    "rules": {
+        "no-unused-vars":[
+            1,
+            {"argsIgnorePattern":"res|next|^err"}
+        ],
+        "indent": [
+            "error",
+            4,
+            {
+                "MemberExpression": 4
+            }
+        ],
+        "linebreak-style": [
+            "error",
+            "windows"
+        ],
+        "nonblock-statement-body-position": [
+            "error",
+            "below"
+        ],
+        "quotes": [
+            "error",
+            "single"
+        ],
+        "prettier/prettier":[
+            "error",
+            {
+                "trailingComma": "es5", 
+                "singleQuote": true, 
+                "printWidth": 120,
+                "tabWidth": 4
+            }
+        ], 
+        "prefer-template":[
+            0
+        ],
+        "no-var": [
+            0
+        ],
+        "semi": [
+            "error",
+            "always"
+        ],
+        "servicenow/no-hardcoded-sysids": [
+            1
+        ],
+        "servicenow/dont-use-gr-as-variablename":[
+            1
+        ],
+        "servicenow/minimize-gs-log-print":[
+            1
+        ],
+        "servicenow/no-packages-calls":[
+            1
+        ]
+    },
+    "plugins": [
+        "servicenow", 
+        "prettier"
+    ]
+}
